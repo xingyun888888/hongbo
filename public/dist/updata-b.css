@@ -1,0 +1,172 @@
+.updata-b {
+    display: none;
+    background: url(../public/images/browser_bg_dc2161cd93.jpg) left top;
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 1000;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.browser-update .update-window {
+
+    background: url(../public/images/browser_bg_wrapper_95bf26b64e.png) no-repeat left top;
+    clear: both;
+    left: 50%;
+    width: 484px;
+    height: 613px;
+    margin-left: -242px;
+    margin-top: -306.5px;
+    position: absolute;
+    top: 49%;
+}
+
+#update {
+    display: block;
+}
+
+.browser-update h1 {
+    color: #212121;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 63px 0 0 0;
+    text-align: center;
+}
+
+.browser-update h2 {
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 24px 57px 15px;
+}
+
+.browser-update h2.store {
+    padding-top: 15px;
+    padding-bottom: 11px;
+}
+
+.browser-update h3 {
+    color: #666;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px 0 40px 0;
+}
+
+.browser-update h4 {
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* 升级窗口 */
+.browser-update .update-window ul {
+    margin: 0 -5px;
+    overflow: hidden;
+    padding: 0 57px;
+}
+
+.browser-update .update-window li {
+    background: url(../public/images/icon_border_74dc80aa0e.png) no-repeat left top;
+    *display: inline;
+    float: left;
+    height: 55px;
+    margin: 0 5px 10px;
+    position: relative;
+    text-align: center;
+    width: 180px;
+    *zoom: 1;
+}
+
+.browser-update .update-window li:hover {
+    background-position: 0 -62px;
+}
+
+.browser-update .update-window a {
+    background: url(../public/images/browser_icon_b0cd0c83fd.png) no-repeat;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.browser-update .ie a {
+    background-position: -190px 0;
+}
+
+.browser-update .firefox a {
+    background-position: 0 -65px;
+}
+
+.browser-update .store a {
+    background: url(../public/images/store_icon_723934771b.png) no-repeat;
+}
+
+.browser-update .jd a {
+    background-position: -190px 0;
+}
+
+/* 注册信息 */
+.browser-update .copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #b3b3b3;
+    font-size: 12px;
+    padding: 0 0 52px;
+    text-align: center;
+}
+
+.browser-update .copyright h5 {
+    display: inline-block;
+    line-height: 30px;
+    *zoom: 1;
+    *display: inline;
+}
+
+.browser-update .copyright ul {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    line-height: 30px;
+    *zoom: 1;
+    *display: inline;
+}
+
+.browser-update .copyright li {
+    display: inline-block;
+    line-height: 11px;
+    padding: 0 8px;
+    border-left: 1px solid #d3d3d3;
+    *zoom: 1;
+    *display: inline;
+}
+
+.browser-update .copyright a {
+    color: #6c96f3;
+}
+
+.browser-update .copyright em {
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    width: 2px;
+    height: 2px;
+    background: #bdbdbd;
+}
+
+.browser-update .copyright h6 {
+    line-height: 30px;
+}
+
+.browser-update .copyright h6 a {
+    color: #bdbdbd;
+}
+
+.browser-update .copyright h6 span {
+    position: relative;
+    padding-right: 10px;
+}

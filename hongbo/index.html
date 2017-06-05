@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title></title>
+    <link rel="stylesheet" href="dist/bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="dist/html5shiv.js"></script>
+    <script src="dist/respond.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="dist/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="dist/updata-b.css">
+    <link rel="stylesheet" href="dist/animate.css">
+    <link rel="stylesheet" href="dist/deanAnimate.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="dist/jquery-1.8.3.min.js"></script>
+    <script src="dist/updata-b.js"></script>
+    <script src="dist/jquery.easing.min.js"></script>
+    <script src="dist/modernizr.min.js"></script>
+    <script src="dist/bootstrap.min.js"></script>
+    <script src="dist/swiper-3.4.2.jquery.min.js"></script>
+    <script src="dist/jquery.animate-colors-min.js"></script>
+    <script src="dist/wow.js"></script>
+    <script src="dist/deanAnimate.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+            _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+            _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#f3f8ff;opacity:1;filter:alpha(opacity=100);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px; padding-left: 50px; padding-right: 5px; color: #696969; ">页面加载中，请等待...</div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+        //window.onload = function () {
+        //  var loadingMask = document.getElementById('loadingDiv');
+        //  loadingMask.parentNode.removeChild(loadingMask);
+        //};
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loadingDiv');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
+
+
+
+</head>
+<body>
+<div class="updata-b">
+    <div class=browser-update id=update>
+        <div class=update-window><h1>请升级您的浏览器</h1>
+            <h2>尊敬的用户，您现在使用的 Internet Explore 浏览器版本过低，建议您升级至 Internet Explorer 9 版本或使用其他浏览器（ 如：Google Chrome 或 Mozilla
+                Firefox ），以便您能继续访问宏博影视的官方网站。</h2>
+            <ul>
+                <li class=chrome><a href="//www.google.cn/intl/zh-CN/chrome/browser/" target=_blank></a></li>
+                <li class=ie><a href=//www.microsoft.com/china/windows/IE/upgrade/index.aspx target=_blank></a></li>
+                <li class=firefox><a href="//www.mozilla.org/zh-CN/firefox/new/" target=_blank></a></li>
+            </ul>
+            <h2>您也可以使用360、QQ等浏览器的极速模式进行访问</h2>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img height="60" src="images/updata-b.png" alt="">
+            </div>
+            <a style="background: none;height: auto;width: auto;text-align: center" href="index.html">我已切换至极速模式，返回浏览</a>
+
+        </div>
+    </div>
+</div>
+<script>
+    var browser=navigator.appName;
+    var b_version=navigator.appVersion;
+    var version=b_version.split(";");
+    var trim_Version=version[1].replace(/[ ]/g,"");
+    if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else {
+        $('.updata-b').fadeOut();
+    }
+</script>
+
+<!--<div class="aside">-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-1-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">视屏制作服务</a></div>-->
+    <!--</div>-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-2-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">摄影服务</a></div>-->
+    <!--</div>-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-3-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">影视设备</a></div>-->
+    <!--</div>-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-4-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">影视俱乐部</a></div>-->
+    <!--</div>-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-5-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">关于我们</a></div>-->
+    <!--</div>-->
+    <!--<div class="aside-nav">-->
+        <!--<img src="img/icon/nav-6-h.png" alt="">-->
+        <!--<div class="nav-text"><a href="#">联系我们</a></div>-->
+    <!--</div>-->
+<!--</div>-->
+    <ul class="m-nav">
+        <li><a class="fir-nav" href="index.html">首页</a></li>
+        <li class="nav-hover">
+            <a href="video-making.html">视频制作服务</a>
+        </li>
+        <li class="nav-hover">
+            <a href="photo-service.html">摄影服务</a>
+        </li>
+        <li class="nav-hover">
+            <a href="video-equipment.html">影视设备</a>
+        </li>
+        <li class="nav-hover">
+            <a href="viedo-club.html">影视俱乐部</a>
+        </li>
+        <li class="nav-hover">
+            <a href="about-us.html">关于我们</a>
+        </li>
+    </ul>
+
+<div class="login-model">
+    <div class="login-v">
+        <p class="p1">登陆</p>
+        <p class="p2">用户名：</p>
+        <input type="text" placeholder="请输入用户名">
+        <p class="p2">密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p3">
+            <span class="jzmm">记住密码</span>
+            <span><a href="#">忘记密码</a></span>
+        </p>
+        <button>登陆</button>
+        <p class="p4 reg">立即注册</p>
+        
+        <p class="p5">
+            <img src="img/icon/19login_10.jpg" alt="">
+            <img src="img/icon/19login_12.jpg" alt="">
+            <img src="img/icon/19login_14.jpg" alt="">
+        </p>
+        <a class="close-model-login">&times;</a>
+    </div>
+</div>
+<div class="reg-model">
+    <div class="reg-v">
+        <p class="p1">注册</p>
+        <p class="p2">邮箱：</p>
+        <input type="text" placeholder="请输入用户名">
+        <p class="p2">密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p2">确认密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p3">
+            <span class="jzmm">我同意 <a href="#">使用条款</a>，<a href="#">隐私条例</a></span>
+        </p>
+        <button>注册</button>
+        <p class="p5">已有账号？<a href="#" class="go-login">登陆</a></p>
+        <a class="close-model-reg">&times;</a>
+    </div>
+</div>
+<div class="navbar">
+    <div class="vessel">
+        <div class="navbar-logo wow fadeInDown" data-wow-delay="0.2s">
+            <img src="img/icon/logo--.png" alt="">
+        </div>
+        <ul class="new-nav">
+            <li>
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.2s" href="index.html">首页</a>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.3s" href="video-making.html">视频制作服务</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover">
+                <a class="fir-nav  wow fadeInDown" data-wow-delay="0.4s" class="fir-nav" href="photo-service.html">摄影服务</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.5s" href="video-equipment.html">影视设备</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.6s" href="viedo-club.html">影视俱乐部</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover">
+                <a class="fir-nav  wow fadeInDown" data-wow-delay="0.7s" href="about-us.html">关于我们</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+        </ul>
+        <div class="login wow fadeInDown" data-wow-delay="0.8s">
+            <div>登陆/注册</div>
+        </div>
+
+        <div class="menu">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <!--<div class="logo-box wow fadeInDown" data-wow-delay="0.4s">-->
+            <!--<img src="img/icon/logo.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="saoyisao wow fadeInDown" data-wow-delay="0.6s">-->
+            <!--<img src="img/icon/saoyisao.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="tel wow fadeInDown" data-wow-delay="0.8s">-->
+            <!--<img src="img/icon/tel.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="top-nav wow fadeInLeft">-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-1-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>视频制作服务</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-2-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>摄影服务</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-3-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>影视设备</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-4-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>影视俱乐部</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-5-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>关于我们</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item-nav">-->
+                <!--<div class="fir-nav">-->
+                    <!--<div class="nav-icon">-->
+                        <!--<img src="img/icon/nav-6-h.png" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="nav-tit">-->
+                        <!--<p>联系我们</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="sec-nav-box">-->
+                    <!--<ul class="sec-nav">-->
+                        <!--<li><a href="#">商业影视制作服务</a></li>-->
+                        <!--<li><a href="#">案例展示</a></li>-->
+                        <!--<li><a href="#">品牌栏目</a></li>-->
+                        <!--<li><a href="#">VR视频制作服务</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<div class="home-swiper swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: url('img/home-banner-1.jpg') no-repeat center /cover"></div>
+        <div class="swiper-slide" style="background: url('img/home-banner-2.jpg') no-repeat center /cover"></div>
+        <div class="swiper-slide" style="background: url('img/home-banner-1.jpg') no-repeat center /cover"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <script>
+        $(function () {
+            var swiper = new Swiper('.home-swiper',{
+                effect: 'fade',
+                pagination: '.swiper-pagination',
+                paginationClickable: true
+            });
+        })
+    </script>
+</div>
+
+<div class="work-case home-item">
+    <div class="vessel">
+        <div class="h-title">
+            <p class="wow fadeInUp">作品案例 <span>WORK CASE</span></p>
+            <div class="btn-box ">
+                <a class="hover wow fadeInUp" href="" data-wow-delay='0.2s'>商业影视</a>
+                <a class="wow fadeInUp" href="" data-wow-delay='0.4s'>案例展示</a>
+                <a class="wow fadeInUp" href="" data-wow-delay='0.6s'>品牌栏目</a>
+                <a class="wow fadeInUp" href="" data-wow-delay='0.8s'>VR视频</a>
+            </div>
+        </div>
+        <div class="container-hone wow fadeInUp">
+            <div class="row">
+                <div class="swiper-img">
+                    <div class="swiper-container work-swiper">
+                        <div class="swiper-wrapper">
+                            <!--首页最多展示四个-->
+                            <div class="swiper-slide dean-scale">
+                                <img src="img/work-01.jpg" alt="">
+                                <div class="img-com">
+                                    <p class="cn">云拍不是梦1</p>
+                                    <p class="en">CLOUDS ARE NOT A DREAM</p>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide dean-scale">
+                                <img src="img/work-01.jpg" alt="">
+                                <div class="img-com">
+                                    <p class="cn">云拍不是梦2</p>
+                                    <p class="en">CLOUDS ARE NOT A DREAM</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide dean-scale">
+                                <img src="img/work-01.jpg" alt="">
+                                <div class="img-com">
+                                    <p class="cn">云拍不是梦3</p>
+                                    <p class="en">CLOUDS ARE NOT A DREAM</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide dean-scale">
+                                <img src="img/work-01.jpg" alt="">
+                                <div class="img-com">
+                                    <p class="cn">云拍不是梦4</p>
+                                    <p class="en">CLOUDS ARE NOT A DREAM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="img-com-ready">
+                            <p class="ready-cn"></p>
+                            <p class="ready-en"></p>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            var swiper = new Swiper('.work-swiper',{
+                                effect: 'slide',
+                                pagination: '.swiper-pagination',
+                                paginationClickable: true,
+                                loop: true,
+                                onSlideChangeEnd: function(swiper){
+
+                                    var htmlCn = $('.work-swiper .swiper-slide-active .img-com p.cn').html();
+                                    var htmlEn = $('.work-swiper .swiper-slide-active .img-com p.en').html();
+                                    $('.img-com-ready .ready-cn').html(htmlCn);
+                                    $('.img-com-ready .ready-en').html(htmlEn);
+                                }
+                            });
+                        })
+                    </script>
+                </div>
+                <div class="work-img-com">
+                    <div class="work-list works-text works-text-1" style="background: #CA2E3E">
+
+
+                        <!--文字背景，这个图片不需要后台上传-->
+                        <img src="img/works_03.jpg" alt="">
+
+
+                        <div class="img-text">
+                            <p class="title">智能手表</p>
+                            <span></span>
+                            <p>影片融入了设计元素，传达产品的设计感和追求精致的理念，用三维渲染来提升产品的视觉效果...</p>
+                        </div>
+
+                        <div class="arrow">
+                            <img src="img/icon/works-go-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="work-list works-img">
+                        <img src="img/works_03.jpg" alt="">
+                        <div class="rectborder"></div>
+                    </div>
+                    <div class="work-list works-text works-text-2" style="background: #8A8888">
+
+
+                        <!--文字背景，这个图片不需要后台上传-->
+                        <img src="img/works_03.jpg" alt="">
+
+
+                        <div class="img-text">
+                            <p class="title">智能手表</p>
+                            <span></span>
+                            <p>影片融入了设计元素，传达产品的设计感和追求精致的理念，用三维渲染来提升产品的视觉效果...</p>
+                        </div>
+
+                        <div class="arrow">
+                            <img src="img/icon/works-go-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="work-list works-img">
+                        <img src="img/works_06.jpg" alt="">
+                        <div class="rectborder"></div>
+                    </div>
+                    <div class="work-list works-text works-text-3" style="background: #252525">
+
+
+                        <!--文字背景，这个图片不需要后台上传-->
+                        <img src="img/works_03.jpg" alt="">
+
+
+                        <div class="img-text img-text-3">
+                            <p class="title">智能手表</p>
+                            <span></span>
+                            <p>影片融入了设计元素，传达产品的设计感和追求精致的理念，用三维渲染来提升产品的视觉效果...</p>
+                        </div>
+
+                        <div class="arrow">
+                            <img src="img/icon/works-go-3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="work-list works-img">
+                        <a href="#" class="link">
+                            <img src="img/works_08.jpg" alt="">
+                            <div class="rectborder"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="photogaphy home-item">
+    <div class="vessel">
+        <div class="h-title">
+            <p class="wow fadeInUp" >摄影 <span>PHOTOGRAPHY</span></p>
+            <div class="btn-box">
+                <a class="hover wow fadeInUp" data-wow-delay="0.2s" href="">平面拍摄</a>
+                <a class="wow fadeInUp" data-wow-delay="0.4s" href="">摄像培训</a>
+                <a class="wow fadeInUp" data-wow-delay="0.6s" href="">摄影培训</a>
+            </div>
+        </div>
+
+        <div class="photogaphy-list-box wow fadeInUp">
+            <div class="photogaphy-demo artGroup slide wow fadeInUp">
+                <div class="artwork">
+                    <img src="img/pho-demo.jpg" alt="">
+                    <div class="detail">
+                        <p class="title">则能缺失的爱</p>
+                        <p>本片旨在描述当代社会家庭缺失关爱的现状，从不同家庭觉得的角度出发，将问题用艺术化的手法一一呈现，深入人心，引发强烈的共鸣，让人们思考，发至内心的思考对家人的关爱</p>
+                        <a href="#">more</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="photogaphy-list wow fadeInUp">
+                <div class="photo-list-demo photo-text">
+                    <div class="text-box">
+                        <p class="title">怎能缺失的爱</p>
+                        <p>本片旨在描述当代社会家庭缺失关爱的现状，从不同家庭觉得的角度出发，将问题用艺术化的手法一一呈现，深入人心，引发强烈的共鸣，让人们思考，发至内心的思考对家人的关爱</p>
+                    </div>
+                </div>
+                <div class="photo-list-demo photo-img">
+                    <img src="img/pho_03.jpg" alt="">
+                    <div class="rectborder"></div>
+                </div>
+                <div class="photo-list-demo photo-img">
+                    <img src="img/pho_06.jpg" alt="">
+                    <div class="rectborder"></div>
+                </div>
+                <div class="photo-list-demo photo-text">
+                    <div class="text-box">
+                        <p class="title">FUN生活</p>
+                        <p>家具品牌广告，用一段清新的创意小片段与品牌宣传的口号契合，为销售做强有力的宣传，影片采用欧式童话风格塑造人物和场景，尽可能带来清新可爱感觉的同时又不失典雅柔和的气息...</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="video-equipment home-item">
+    <div class="vessel">
+        <div class="h-title">
+            <p class="wow fadeInUp">摄影设备 <span>VIDEO EQUIPMENT</span></p>
+            <div class="btn-box">
+
+            </div>
+        </div>
+
+        <div class="qeu-list-box wow fadeInUp">
+            <div class="swiper-container qeu-list-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-text">
+                            <div class="img-box ">
+                                <img src="img/equ_10.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-g">
+                                    <p class="title">
+                                        徕卡M系列
+                                    </p>
+                                    <p>
+                                        卓越的锐利与细腻的细节再现。徕卡M配置了重新设计的240万像素全画幅CMOS传感器——徕卡Max 24－MP传感器。
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-text">
+                            <div class="img-box">
+                                <img src="img/equ_12.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-g">
+                                    <p class="title">
+                                        徕卡M系列
+                                    </p>
+                                    <p>
+                                        卓越的锐利与细腻的细节再现。徕卡M配置了重新设计的240万像素全画幅CMOS传感器——徕卡Max 24－MP传感器。
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-text">
+                            <div class="img-box">
+                                <img src="img/equ_14.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-g">
+                                    <p class="title">
+                                        徕卡M系列
+                                    </p>
+                                    <p>
+                                        卓越的锐利与细腻的细节再现。徕卡M配置了重新设计的240万像素全画幅CMOS传感器——徕卡Max 24－MP传感器。
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-text">
+                            <div class="img-box">
+                                <img src="img/equ_16.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-g">
+                                    <p class="title">
+                                        徕卡M系列
+                                    </p>
+                                    <p>
+                                        卓越的锐利与细腻的细节再现。徕卡M配置了重新设计的240万像素全画幅CMOS传感器——徕卡Max 24－MP传感器。
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                     new Swiper('.qeu-list-swiper', {
+                        paginationClickable: true,
+                        slidesPerView: 4,
+                        spaceBetween: 15,
+                        loop:true,
+                        breakpoints: {
+                            1200:{
+                                slidesPerView: 3,
+                                spaceBetween: 20
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20
+                            },
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 10
+                            },
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 10
+                            }
+                        }
+                    });
+                })
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="film-club home-item">
+    <div class="vessel">
+        <div class="h-title">
+            <p class="wow fadeInUp">影视俱乐部 <span>FILM AND TELEVISION CLUB</span></p>
+            <div class="btn-box">
+            </div>
+        </div>
+        <div class="club-list-box container-fluid wow fadeInUp">
+            <div class="row">
+                <div class="club-demo col-md-6 col-sm-12">
+                    <div class="img-box">
+                        <img src="img/club.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <p class="title">
+                            拍客影像
+                        </p>
+                        <p>
+                            shoot the image
+                        </p>
+                    </div>
+                </div>
+                <div class="club-list club-list-1 col-md-3 col-sm-6">
+                    <div class="waipai-box">
+                        <div class="img-box">
+                            <img src="img/icon/waipai.png" alt="">
+                        </div>
+                        <div class="text-box">
+                            <p class="title">
+                                拍客影像
+                            </p>
+                            <p>
+                                shoot the image
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="club-list club-list-2 col-md-3 col-sm-6">
+                    <div class="hangpai-box">
+                        <div class="img-box">
+                            <img src="img/icon/hangpai.png" alt="">
+                        </div>
+                        <div class="text-box">
+                            <p class="title">
+                                拍客影像
+                            </p>
+                            <p>
+                                shoot the image
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    var height = $('.club-demo .img-box img').css('height');
+                    $('.club-list .waipai-box,.club-list .hangpai-box').css({'height':height,'line-height':height});
+
+                    $(window).resize(function () {
+                        var height = $('.club-demo .img-box img').css('height');
+                        $('.club-list .waipai-box,.club-list .hangpai-box').css({'height':height,'line-height':height});
+                    });
+                    $(window).scroll(function () {
+                        var height = $('.club-demo .img-box img').css('height');
+                        $('.club-list .waipai-box,.club-list .hangpai-box').css({'height':height,'line-height':height});
+                    })
+                })
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="footer wow fadeInUp">
+    <div class="vessel">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">主要业务</p>
+                            <p><i>Main business</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">视频制作服务</a></div>
+                        <div><a class="link" href="">摄影服务</a></div>
+                        <div><a class="link" href="">影视设备</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">影视俱乐部</p>
+                            <p><i>F&T club</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">拍客影像</a></div>
+                        <div><a class="link" href="">外派&旅拍</a></div>
+                        <div><a class="link" href="">会员中心</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">关于我们</p>
+                            <p><i>About us</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">公司介绍</a></div>
+                        <div><a class="link" href="">企业文化</a></div>
+                        <div><a class="link" href="">加入我们</a></div>
+                        <div><a class="link" href="">联系我们</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">关注我们</p>
+                            <p><i>Follow us</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">新浪微博</a></div>
+                        <div><a class="link" href="">官方微信</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-box">
+                        <img src="img/foot-logo_14.jpg" alt="">
+                    </div>
+                    <div class="about-us">
+                        深圳宏博影视文化传媒有限公司，长期致力于视觉影像艺术的创作、研究与商业化服务，积极推动影视文化娱乐产业的优化升级和互动交流。
+                    </div>
+                    <div class="contact-us">
+                        <p>欢迎致电</p>
+                        <p>
+                            0755-8175-8585
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-add">
+        <div class="vessel">
+            <p class="fl">COPYRIGHT © 2015 - Powered by CloudDream</p>
+            <p class="fr">地址：深圳市福田区红荔路38号   群星广场2311室</p>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>
+
+

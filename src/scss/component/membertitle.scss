@@ -1,0 +1,26 @@
+@import "../valiable";
+.title-box{
+  margin:20px 0;
+  .long-line{
+    width:100%;
+    height:2px;
+    background:$gray9;
+    margin-bottom:91px;
+  }
+  .big-title{
+    font-size:32px;
+    font-weight:600;
+
+  }
+  .small-title{
+    font-size:20px;
+    font-weight:500;
+  }
+  .short-line{
+    width:100px;
+    height:2px;
+    background:$red;
+    margin-top:30px;
+    margin-bottom:60px;
+  }
+}

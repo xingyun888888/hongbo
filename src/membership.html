@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title></title>
+    <link rel="stylesheet" href="dist/bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="dist/html5shiv.js"></script>
+    <script src="dist/respond.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="dist/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="dist/updata-b.css">
+    <link rel="stylesheet" href="dist/animate.css">
+    <link rel="stylesheet" href="dist/deanAnimate.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--个人的样式-->
+    <link rel="stylesheet" href="css/member.css">
+    <script src="dist/jquery-1.8.3.min.js"></script>
+    <script src="dist/updata-b.js"></script>
+    <script src="dist/jquery.easing.min.js"></script>
+    <script src="dist/modernizr.min.js"></script>
+    <script src="dist/bootstrap.min.js"></script>
+    <script src="dist/swiper-3.4.2.jquery.min.js"></script>
+    <script src="dist/jquery.animate-colors-min.js"></script>
+    <script src="dist/wow.js"></script>
+    <script src="dist/deanAnimate.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+            _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+            _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#f3f8ff;opacity:1;filter:alpha(opacity=100);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px; padding-left: 50px; padding-right: 5px; color: #696969; ">页面加载中，请等待...</div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+        //window.onload = function () {
+        //  var loadingMask = document.getElementById('loadingDiv');
+        //  loadingMask.parentNode.removeChild(loadingMask);
+        //};
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                var loadingMask = document.getElementById('loadingDiv');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
+
+
+
+</head>
+<body>
+<div class="updata-b">
+    <div class=browser-update id=update>
+        <div class=update-window><h1>请升级您的浏览器</h1>
+            <h2>尊敬的用户，您现在使用的 Internet Explore 浏览器版本过低，建议您升级至 Internet Explorer 9 版本或使用其他浏览器（ 如：Google Chrome 或 Mozilla
+                Firefox ），以便您能继续访问宏博影视的官方网站。</h2>
+            <ul>
+                <li class=chrome><a href="//www.google.cn/intl/zh-CN/chrome/browser/" target=_blank></a></li>
+                <li class=ie><a href=//www.microsoft.com/china/windows/IE/upgrade/index.aspx target=_blank></a></li>
+                <li class=firefox><a href="//www.mozilla.org/zh-CN/firefox/new/" target=_blank></a></li>
+            </ul>
+            <h2>您也可以使用360、QQ等浏览器的极速模式进行访问</h2>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img height="60" src="images/updata-b.png" alt="">
+            </div>
+            <a style="background: none;height: auto;width: auto;text-align: center" href="index.html">我已切换至极速模式，返回浏览</a>
+
+        </div>
+    </div>
+</div>
+<script>
+    var browser=navigator.appName;
+    var b_version=navigator.appVersion;
+    var version=b_version.split(";");
+    var trim_Version=version[1].replace(/[ ]/g,"");
+    if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
+    {
+        $('.updata-b').fadeIn();
+    }
+    else {
+        $('.updata-b').fadeOut();
+    }
+</script>
+
+<!--<div class="aside">-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-1-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">视屏制作服务</a></div>-->
+<!--</div>-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-2-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">摄影服务</a></div>-->
+<!--</div>-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-3-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">影视设备</a></div>-->
+<!--</div>-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-4-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">影视俱乐部</a></div>-->
+<!--</div>-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-5-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">关于我们</a></div>-->
+<!--</div>-->
+<!--<div class="aside-nav">-->
+<!--<img src="img/icon/nav-6-h.png" alt="">-->
+<!--<div class="nav-text"><a href="#">联系我们</a></div>-->
+<!--</div>-->
+<!--</div>-->
+<ul class="m-nav">
+    <li><a class="fir-nav" href="index.html">首页</a></li>
+    <li class="nav-hover">
+        <a href="video-making.html">视频制作服务</a>
+    </li>
+    <li class="nav-hover">
+        <a href="photo-service.html">摄影服务</a>
+    </li>
+    <li class="nav-hover">
+        <a href="video-equipment.html">影视设备</a>
+    </li>
+    <li class="nav-hover">
+        <a href="viedo-club.html">影视俱乐部</a>
+    </li>
+    <li class="nav-hover">
+        <a href="about-us.html">关于我们</a>
+    </li>
+</ul>
+
+<div class="login-model">
+    <div class="login-v">
+        <p class="p1">登陆</p>
+        <p class="p2">用户名：</p>
+        <input type="text" placeholder="请输入用户名">
+        <p class="p2">密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p3">
+            <span class="jzmm">记住密码</span>
+            <span><a href="#">忘记密码</a></span>
+        </p>
+        <button>登陆</button>
+        <p class="p4 reg">立即注册</p>
+
+        <p class="p5">
+            <img src="img/icon/19login_10.jpg" alt="">
+            <img src="img/icon/19login_12.jpg" alt="">
+            <img src="img/icon/19login_14.jpg" alt="">
+        </p>
+        <a class="close-model-login">&times;</a>
+    </div>
+</div>
+<div class="reg-model">
+    <div class="reg-v">
+        <p class="p1">注册</p>
+        <p class="p2">邮箱：</p>
+        <input type="text" placeholder="请输入用户名">
+        <p class="p2">密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p2">确认密码：</p>
+        <input type="password" placeholder="请输入密码">
+        <p class="p3">
+            <span class="jzmm">我同意 <a href="#">使用条款</a>，<a href="#">隐私条例</a></span>
+        </p>
+        <button>注册</button>
+        <p class="p5">已有账号？<a href="#" class="go-login">登陆</a></p>
+        <a class="close-model-reg">&times;</a>
+    </div>
+</div>
+<div class="navbar">
+    <div class="vessel">
+        <div class="navbar-logo wow fadeInDown" data-wow-delay="0.2s">
+            <img src="img/icon/logo--.png" alt="">
+        </div>
+        <ul class="new-nav">
+            <li>
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.2s" href="index.html">首页</a>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.3s" href="video-making.html">视频制作服务</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover">
+                <a class="fir-nav  wow fadeInDown" data-wow-delay="0.4s" class="fir-nav" href="photo-service.html">摄影服务</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.5s" href="video-equipment.html">影视设备</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover ">
+                <a class="fir-nav wow fadeInDown" data-wow-delay="0.6s" href="viedo-club.html">影视俱乐部</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+            <li class="nav-hover">
+                <a class="fir-nav  wow fadeInDown" data-wow-delay="0.7s" href="about-us.html">关于我们</a>
+                <div class="sec-nav">
+                    <div class="w-line"></div>
+                    <div><a href="#">商业影视制作服务</a></div>
+                    <div><a href="#">案例展示</a></div>
+                    <div><a href="#">品牌栏目</a></div>
+                    <div><a href="#">VR视频制作服务</a></div>
+                </div>
+            </li>
+        </ul>
+        <div class="login wow fadeInDown" data-wow-delay="0.8s">
+            <div>登陆/注册</div>
+        </div>
+
+        <div class="menu">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <!--<div class="logo-box wow fadeInDown" data-wow-delay="0.4s">-->
+        <!--<img src="img/icon/logo.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="saoyisao wow fadeInDown" data-wow-delay="0.6s">-->
+        <!--<img src="img/icon/saoyisao.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="tel wow fadeInDown" data-wow-delay="0.8s">-->
+        <!--<img src="img/icon/tel.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="top-nav wow fadeInLeft">-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-1-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>视频制作服务</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-2-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>摄影服务</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-3-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>影视设备</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-4-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>影视俱乐部</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-5-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>关于我们</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-nav">-->
+        <!--<div class="fir-nav">-->
+        <!--<div class="nav-icon">-->
+        <!--<img src="img/icon/nav-6-h.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="nav-tit">-->
+        <!--<p>联系我们</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="sec-nav-box">-->
+        <!--<ul class="sec-nav">-->
+        <!--<li><a href="#">商业影视制作服务</a></li>-->
+        <!--<li><a href="#">案例展示</a></li>-->
+        <!--<li><a href="#">品牌栏目</a></li>-->
+        <!--<li><a href="#">VR视频制作服务</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<!--个人头像及信息说明-->
+<div class="member-header text-center">
+    <div class="photo">
+        <img src="./images/icon.png" alt="">
+        <span>修改头像</span>
+    </div>
+    <div class="name">
+        sdfsdsfsdfs
+    </div>
+    <div class="info">
+        <span class="star">2</span>
+        <span class="good">3</span>
+        <span class="look">3</span>
+    </div>
+</div>
+<div class="container  person-nav">
+    <div class="row">
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">个人相册</a><span class="split-line"></span></div>
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的关注</a><span class="split-line"></span></div>
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的收藏</a><span class="split-line"></span></div>
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的评论</a><span class="split-line"></span></div>
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的点赞</a><span class="split-line"></span></div>
+        <div class="col-sm-2 col-xs-12 text-center"><a href="#">会员制度</a></div>
+    </div>
+</div>
+<div class="member-container">
+    <div class="mem-fl-one">
+        <div class="title-box text-center">
+            <div class="long-line"></div>
+            <div class="big-title">VIP MEMEBERS</div>
+            <div class="small-title">vip 会员</div>
+            <div class="short-line center-block"></div>
+        </div>
+        <div class="mem-fl-content mem-fl1-content">
+            <div class="row">
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="./images/members/mem-fl1-01.jpg" alt=""/>
+                    <div class="img-text text-left">
+                        分享线下vip会员区,在舒适的环境中,<br/>
+                        分享交流摄影乐趣！
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="./images/members/mem-fl1-02.jpg" alt=""/>
+                    <div class="img-text text-left">
+                        分享线下vip会员区,在舒适的环境中,<br/>
+                        分享交流摄影乐趣！
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="./images/members/mem-fl1-03.jpg" alt=""/>
+                    <div class="img-text text-left">
+                        分享线下vip会员区,在舒适的环境中,<br/>
+                        分享交流摄影乐趣！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mem-fl-two">
+        <div class="title-box text-center">
+            <div class="long-line"></div>
+            <div class="big-title">BECOME A VIP MEMBER</div>
+            <div class="small-title">成为 vip 会员</div>
+            <div class="short-line center-block"></div>
+        </div>
+        <div class="mem-fl-content mem-fl2-content">
+           <div class="row">
+               <div class="col-md-4 col-xs-12 text-center">
+                   <img src="./images/members/mem-fl2-01.jpg" alt=""/>
+                   <div class="price">￥399<br/><span>元/年</span></div>
+                   <div class="level-ch">白银级</div>
+                   <div class="level-en">Silver level</div>
+                   <div class="level-split-line"></div>
+                   <div class="level-detail">
+                       任意两节课课程体验<br/>
+                       本地主题拍摄活动体验2场/年<br/>
+                       设备购买优惠<br/>
+                       线下拍摄活动参与<br/>
+                       ...
+                   </div>
+                   <div class="level-open">
+                     <a href="">立即开通</a>
+                   </div>
+               </div>
+               <div class="col-md-4 col-xs-12 text-center">
+                   <img src="./images/members/mem-fl2-02.jpg" alt=""/>
+                   <div class="price">￥3999<br/><span>元/年</span></div>
+                   <div class="level-ch">黄金级</div>
+                   <div class="level-en">Silver level</div>
+                   <div class="level-split-line  middle"></div>
+                   <div class="level-detail">
+                       初级、中级摄影课程免费参与<br/>
+                       本地主题拍摄活动体验12场/年<br/>
+                       设备购买优惠<br/>
+                       作品参展&参赛<br/>
+                       ...
+                   </div>
+                   <div class="level-open  middle">
+                       <a href="">立即开通</a>
+                   </div>
+               </div>
+               <div class="col-md-4 col-xs-12 text-center">
+                   <img src="./images/members/mem-fl2-01.jpg" alt=""/>
+                   <div class="price">￥6999<br/><span>元/年</span></div>
+                   <div class="level-ch">钻石级</div>
+                   <div class="level-en">Silver level</div>
+                   <div class="level-split-line"></div>
+                   <div class="level-detail">
+                       初级、中级、高级摄影课程免费参与<br/>
+                       (或任意换选ps课程)<br/>
+                       本地主体拍摄活动12场/年<br/>
+                       国内旅行拍摄活动1场/年<br/>
+                       ...
+                   </div>
+                   <div class="level-open">
+                       <a href="">立即开通</a>
+                   </div>
+               </div>
+           </div>
+           <div class="arrow-right">
+               <a href="#showVipDetail" data-toggle="modal"><i>VIP 特权详情</i><span></span></a>
+            </div>
+            <div class="phone-detail">
+               致电拍客影像官方客服<span>0755-21658585</span>，或致电拍客影像会员运营经理田娅<span>1333333333</span><br/>
+                关注<span>拍客影像</span>官方微信公众号，了解更多会员特权!
+            </div>
+            <div class="wechat-img">
+                <img src="./images/members/wechat.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+
+    <div class="mem-f1-three">
+        <div class="title-box text-center" >
+            <div class="long-line"></div>
+            <div class="big-title">COMMON PROBLEM</div>
+            <div class="small-title">常见问题</div>
+            <div class="short-line center-block"></div>
+        </div>
+        <div class="mem-fl-content mem-fl3-content">
+           <ul>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">如何成为VIP会员</p>
+                       <p class="detail-content">
+                           首先注册成为拍客应县的普通会员，再通过官方渠道联系客服，提供会员信息，并支付相应vip费用，成为vip会员
+                       </p>
+                   </div>
+               </li>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">成为vip会员有什么好处？</p>
+                       <p class="detail-content">
+                           相较普通会员，能获得更多福利和特权，为摄影技术水平和艺术审美的提升带来帮助。同时也能建立和扩大摄影交际圈，分享快乐，收获资源
+                       </p>
+                   </div>
+               </li>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">已购买的VIP会员是否可以升级成为更高级的vip会员？</p>
+                       <p class="detail-content">
+                           可以升级。根据会员所享有的未使用的福利和特权情况，折算成相应的费用金额，用于抵扣购买高级别会员所支付的费用。
+                       </p>
+                   </div>
+               </li>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">vip账号或资格是否可以转让？</p>
+                       <p class="detail-content">
+                           因为vip会员制度是基于个人兴趣爱好所建立的，因此在会员享受vip福利与特权的过程中不能进行账号和资格的转让。
+                       </p>
+                   </div>
+               </li>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">vip会员的失效期是多久？</p>
+                       <p class="detail-content">
+                           目前，我们暂时只开放年度vip会员的购买服务，失效期一年。VIP账号到期后，将自动取消vip会员等级资格，直至再次购买vip会员。
+                       </p>
+                   </div>
+               </li>
+               <li>
+                   <div class="content-border center-block">
+                       <p class="detail-title">如何成为VIP会员</p>
+                       <p class="detail-content">
+                           首先注册成为拍客应县的普通会员，再通过官方渠道联系客服，提供会员信息，并支付相应vip费用，成为vip会员
+                       </p>
+                   </div>
+               </li>
+           </ul>
+        </div>
+    </div>
+</div>
+<div class="modal fade showVipDetail" tabindex="-1" role="dialog" id="showVipDetail">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                <h1 class="modal-title">VIP特权详情</h1>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <h1>普通会员</h1>
+                            <p>作品上传 (单张)</p>
+                            <p>关注、点赞、评论与转发</p>
+                            <p>线上活动参与</p>
+                            <a href="#">免费</a>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <h1>白银级VIP</h1>
+                            <p>作品上传 (单张)</p>
+                            <p>作品上传 (组照)</p>
+                            <p>关注、点赞、评论与转发</p>
+                            <p>无作品上传数量限制 (100张)</p>
+                            <p>会员等级徽章</p>
+                            <p>线上活动参与</p>
+                            <p>线下拍摄活动参与</p>
+                            <p>任意两节课课程体验</p>
+                            <p>本地主题拍摄活动体验2场/年</p>
+                            <a href="#">399元/年</a>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <h1>黄金级VIP</h1>
+                            <p>作品上传 (单张)</p>
+                            <p>作品上传 (组照)</p>
+                            <p>关注、点赞、评论与转发</p>
+                            <p>无作品上传数量限制 (100张)</p>
+                            <p>会员等级徽章</p>
+                            <p>活动召集与发布</p>
+                            <p>线上活动参与</p>
+                            <p>线下拍摄活动参与</p>
+                            <p>名师讲座活动参与</p>
+                            <p>作品参展&参赛</p>
+                            <p>初级、中级摄影课程免费参与</p>
+                            <p>本地主题拍摄活动12场/年</p>
+                            <a href="#">3999元/年</a>
+                        </div>
+                        <div class="col-md-3 col-sm-12 last">
+                            <h1>钻石级VIP</h1>
+                            <p>作品上传 (单张)</p>
+                            <p>作品上传 (组照)</p>
+                            <p>关注、点赞、评论与转发</p>
+                            <p>无作品上传数量限制 (100张)</p>
+                            <p>会员等级徽章</p>
+                            <p>活动召集与发布</p>
+                            <p>线上活动参与</p>
+                            <p>线下拍摄活动参与</p>
+                            <p>名师讲座活动参与</p>
+                            <p>作品参展&参赛</p>
+                            <p>初级、中级摄影课程免费参与</p>
+                            <p>(或任意换选PS课程)</p>
+                            <p>本地主题拍摄活动12场/年</p>
+                            <p>国内旅行拍摄活动1场/年</p>
+                            <a href="#">6999元/年</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="footer wow fadeInUp">
+    <div class="vessel">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">主要业务</p>
+                            <p><i>Main business</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">视频制作服务</a></div>
+                        <div><a class="link" href="">摄影服务</a></div>
+                        <div><a class="link" href="">影视设备</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">影视俱乐部</p>
+                            <p><i>F&T club</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">拍客影像</a></div>
+                        <div><a class="link" href="">外派&旅拍</a></div>
+                        <div><a class="link" href="">会员中心</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">关于我们</p>
+                            <p><i>About us</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">公司介绍</a></div>
+                        <div><a class="link" href="">企业文化</a></div>
+                        <div><a class="link" href="">加入我们</a></div>
+                        <div><a class="link" href="">联系我们</a></div>
+                    </div>
+                    <div class="f-item">
+                        <div class="item-title">
+                            <p class="title">关注我们</p>
+                            <p><i>Follow us</i></p>
+                            <span></span>
+                        </div>
+                        <div><a class="link" href="">新浪微博</a></div>
+                        <div><a class="link" href="">官方微信</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-box">
+                        <img src="img/foot-logo_14.jpg" alt="">
+                    </div>
+                    <div class="about-us">
+                        深圳宏博影视文化传媒有限公司，长期致力于视觉影像艺术的创作、研究与商业化服务，积极推动影视文化娱乐产业的优化升级和互动交流。
+                    </div>
+                    <div class="contact-us">
+                        <p>欢迎致电</p>
+                        <p>
+                            0755-8175-8585
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-add">
+        <div class="vessel">
+            <p class="fl">COPYRIGHT © 2015 - Powered by CloudDream</p>
+            <p class="fr">地址：深圳市福田区红荔路38号   群星广场2311室</p>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>
+
+
