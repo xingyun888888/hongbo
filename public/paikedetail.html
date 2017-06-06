@@ -27,7 +27,7 @@
 
 
     <!--个人的样式-->
-    <link rel="stylesheet" href="css/personcenter.css">
+    <link rel="stylesheet" href="css/paikedetail.css">
     <script src="dist/jquery-1.8.3.min.js"></script>
     <script src="dist/updata-b.js"></script>
     <script src="dist/jquery.easing.min.js"></script>
@@ -388,100 +388,281 @@
 <!--页面内容--><!--个人头像及信息说明-->
 <!--个人头像及信息说明-->
 <div class="member-header text-center">
-    <div class="photo">
-        <img src="./images/icon.png" alt="">
-        <span>修改头像</span>
-    </div>
-    <div class="name">
-        sdfsdsfsdfs
-    </div>
-    <div class="info">
-        <span class="star">2</span>
-        <span class="good">3</span>
-        <span class="look">3</span>
-    </div>
+    <img src="./images/waipai/wp-banner.jpg" alt="" class="img-responsive" >
 </div>
-<div class="container  person-nav">
-    <div class="row">
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">个人相册</a><span class="split-line"></span></div>
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的关注</a><span class="split-line"></span></div>
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的收藏</a><span class="split-line"></span></div>
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的评论</a><span class="split-line"></span></div>
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">我的点赞</a><span class="split-line"></span></div>
-        <div class="col-sm-2 col-xs-12 text-center"><a href="#">会员制度</a></div>
-    </div>
-</div>
+
+
+
 <!--分割线-->
 <div class="nav-split-line"></div>
 
 <!--个人中心列表-->
-<div class="container person-center-detail">
-    <div  class="list-item row">
-        <div class="col-xs-1">
-            <img src="./images/person/touxiang.jpg" alt="" class="person-photo" >
-        </div>
-        <div class="col-xs-11 content-right">
-            <div>
-                <span class="name">1ucas</span>
-                <span class="date">2017-05-26</span>
+<div class="container paikedetail-container">
+   <div class="detail-item">
+      <div class="photo-detail">
+
+      </div>
+       <div class="image-content">
+           <img src="./images/paikedetail/img1.jpg" alt="" class="img-responsive" >
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorem, iste molestias obcaecati repudiandae sapiente sunt temporibus veniam voluptatem voluptates! Ab, accusamus consequatur cum cumque eos id quia veritatis voluptate.</p>
+           <img src="./images/paikedetail/img2.jpg" alt="" class="img-responsive" >
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorem, iste molestias obcaecati repudiandae sapiente sunt temporibus veniam voluptatem voluptates! Ab, accusamus consequatur cum cumque eos id quia veritatis voluptate.</p>
+       </div>
+       <div class="usermethod">
+           <span class="share">分享</span>
+           <span class="comment">评论</span>
+           <span class="zanzan">赞</span>
+           <span class="star">收藏</span>
+           <span class="look">9332</span>
+       </div>
+       <div class="leavemsg">
+           <textarea name="saytext"  class="input" id="saytext" cols="30" rows="10" placeholder="Write down what you want to" >
+
+           </textarea>
+           <div class="insertcontent"><span class="biaoqing emotion"></span><span class="tupian"></span><a href="#" class="save">评论</a></div>
+           <!--<div class="comment">-->
+               <!--<div class="com_form">-->
+                   <!--&lt;!&ndash;<textarea class="input" id="saytext" name="saytext"></textarea>&ndash;&gt;-->
+                   <!--<p><span class="emotion">表情</span><input type="button" class="sub_btn" value="提交"></p>-->
+               <!--</div>-->
+           <!--</div>-->
+       </div>
+   </div>
+   <div class="allcomment"><b>全部评论</b><span>34</span></div>
+    <!--个人中心列表-->
+    <div class="person-center-detail comment-container">
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="detail">lol that's amazing</span>
-                <a href="#" class="rt comment">23</a>
-                <a href="#" class="rt zan">3</a>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
             </div>
         </div>
-    </div>
-    <div  class="list-item row">
-        <div class="col-xs-1">
-            <img src="./images/person/touxiang.jpg" alt="" class="person-photo" >
-        </div>
-        <div class="col-xs-11 content-right">
-            <div>
-                <span class="name">1ucas</span>
-                <span class="date">2017-05-26</span>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="detail">lol that's amazing</span>
-                <a href="#" class="rt comment">23</a>
-                <a href="#" class="rt zan">3</a>
-            </div>
-        </div>
-    </div>
-    <div  class="list-item row">
-        <div class="col-xs-1">
-            <img src="./images/person/touxiang.jpg" alt="" class="person-photo" >
-        </div>
-        <div class="col-xs-11 content-right">
-            <div>
-                <span class="name">1ucas</span>
-                <span class="date">2017-05-26</span>
-            </div>
-            <div>
-                <span class="detail">lol that's amazing</span>
-                <a href="#" class="rt comment">23</a>
-                <a href="#" class="rt zan">3</a>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
             </div>
         </div>
-    </div>
-    <div  class="list-item row">
-        <div class="col-xs-1">
-            <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
-        </div>
-        <div class="col-xs-11 content-right">
-            <div>
-                <span class="name">1ucas</span>
-                <span class="date">2017-05-26</span>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="detail">lol that's amazing</span>
-                <a href="#" class="rt comment">23</a>
-                <a href="#" class="rt zan">3</a>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
+            </div>
+        </div>
+        <div  class="list-item">
+            <div class="list-content">
+                <img src="./images/person/touxiang.jpg" alt="" class="person-photo img-responsive" >
+                <div class="content-right">
+                    <div>
+                        <span class="name">1ucas</span>
+                        <span class="date">2017-05-26</span>
+                    </div>
+                    <div>
+                        <span class="detail">lol that's amazing</span>
+                        <a href="#" class="rt zan">3</a>
+                        <a href="#" class="rt comment"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <i class="small-triangle"></i>
+                <div>
+                    <h2>风起乱世铭</h2>
+                    <span>@nimei</span>&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem doloremque earum est molestiae sint veritatis. Alias consequuntur ea error et, eum labore minus mollitia nesciunt obcaecati reiciendis voluptate voluptatibus.
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="footer wow fadeInUp">
     <div class="vessel">
@@ -554,10 +735,15 @@
 
     </div>
 </div>
-
-
+<script src="js/jquery.qqFace.js" type="text/javascript"></script>
 <script>
     new WOW().init();
+    $(function(){
+        $('.emotion').qqFace({
+            assign:'saytext', //给输入框赋值
+            path:'images/arclist/'    //表情图片存放的路径
+        });
+    });
 </script>
 </body>
 </html>

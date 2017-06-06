@@ -1,0 +1,108 @@
+@import "common/common";
+@import "common/mixin";
+@import "valiable";
+
+@import "component/membertitle";
+@import "component/member-header";
+
+
+@import "component/comment";
+.container{
+  max-width:1200px;
+}
+.member-header{
+  @include clearfix;
+  img{
+    width:100%;
+  }
+}
+
+
+.paikedetail-container{
+  margin-bottom:160px;
+  .detail-item{
+     .image-content{
+       img{
+
+       }
+       p{
+         margin:25px 0;
+       }
+     }
+    .usermethod{
+      margin-bottom:40px;
+      span{
+        padding-left:20px;
+        margin-right:25px;
+      }
+      .share{
+        background:url("../images/share.png") no-repeat left center;
+      }
+      .comment{
+        background:url("../images/paikedetail/comment.png") no-repeat left center;
+
+      }
+      .zanzan{
+        background:url("../images/paikedetail/zanzan.png") no-repeat left center;
+
+      }
+      .star{
+        background:url("../images/paikedetail/star1.jpg") no-repeat left center;
+
+      }
+      .look{
+        background:url("../images/paikedetail/look.png") no-repeat left center;
+
+      }
+    }
+    .leavemsg{
+      textarea{
+        width:100%;
+        padding:8px;
+        border:1px solid #aaa;
+        resize:none;
+        letter-spacing:1px;
+      }
+      .insertcontent{
+        padding:10px;
+        span{
+          margin-right:18px;
+          padding:10px 0;
+          padding-left:20px;
+        }
+        .biaoqing{
+          background:url("../images/paikedetail/biaoqing.jpg") no-repeat left center;
+        }
+        .tupian{
+          background:url("../images/paikedetail/tupian.png") no-repeat left center;
+        }
+        .qqFace{
+          background:#fff;
+          border:1px solid #aaa;
+        }
+        .save{
+          float:right;
+          width:100px;
+          height:35px;
+          color:#fff;
+          background:$red;
+          line-height:35px;
+          text-align:center;
+        }
+      }
+    }
+  }
+  .allcomment{
+    margin-top:45px;
+    b{
+      color:$gray3;
+      font-size:16px;
+      font-weight:500;
+      margin-right:30px;
+    }
+    span{
+      color:$gray9;
+      font-size:16px;
+    }
+  }
+}

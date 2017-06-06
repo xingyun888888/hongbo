@@ -1,0 +1,77 @@
+.comment-container{
+  .list-item{
+    border-bottom:1px solid #ddd;
+    padding:20px 0;
+    .list-content{
+      display:flex;
+      justify-content:start;
+      align-items:center;
+      .person-photo{
+        min-width:60px;
+        min-height:60px;
+      }
+      .content-right{
+        padding-left:15px;
+        flex:1;
+        &>div{
+          padding:5px 0;
+        }
+        .name{
+          font-weight:600;
+          font-size:16px;
+          color:$gray3;
+          margin-right:15px;
+        }
+        .detail{
+          color:$gray3;
+          font-weight:600;
+        }
+        .date{
+          color:$gray9;
+          font-weight:300;
+        }
+        .comment{
+          color:#aaa;
+          margin-right:20px;
+          padding:10px 0;
+          padding-left:20px;
+          background:url("../images/comment.jpg") no-repeat left center;
+        }
+        .zan{
+          font-weight:300;
+          font-size:12px;
+          color:#aaa;
+          padding-left:20px;
+          background:url("../images/zanzan.png") no-repeat left center;
+        }
+      }
+
+    }
+    .comment-detail{
+      position:relative;
+      .small-triangle{
+        display:inline-block;
+        width:0;
+        height:0;
+        border:12px solid transparent;
+        border-bottom:12px solid #f5f5f5;
+        position:absolute;
+        left:5%;
+        top:-24px;
+      }
+      h2{
+        color:$gray3;
+        font-size:18px;
+        margin-bottom:15px;
+      }
+      span{
+        color:$gray3;
+        font-weight:600;
+      }
+      background:#f5f5f5;
+      margin-left:100px;
+      padding:30px;
+    }
+  }
+
+}

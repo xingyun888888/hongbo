@@ -4,6 +4,7 @@
 
 @import "component/membertitle";
 @import "component/member-header";
+@import "component/comment";
 .member-header{
   @include clearfix;
   background:url("../images/members/member-theme.jpg");
@@ -56,37 +57,3 @@
 }
 
 
-.person-center-detail{
-  .list-item{
-    border-bottom:1px solid #ddd;
-    .person-photo{
-      vertical-align:middle;
-      min-width:60px;
-      min-height:60px;
-      width:100%;
-    }
-    .content-right{
-      display:table-cell;
-      vertical-align:middle;
-      height:92px;
-      .name{
-        margin-right:20px;
-      }
-      .date{
-        color:$gray9;
-        font-weight:300;
-      }
-      .detail{
-
-      }
-      .comment{
-         margin-right:10px;
-      }
-      .zan{
-         margin-right:10px;
-      }
-
-    }
-  }
-
-}
