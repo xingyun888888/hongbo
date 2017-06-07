@@ -5,6 +5,8 @@
 @import "component/membertitle";
 @import "component/member-header";
 
+@import "component/banner_header";
+
 .member-header{
   @include clearfix;
   background:url("../images/members/member-theme.jpg");
@@ -73,13 +75,27 @@
         font-size:14px;
         margin:0;
         span{
-          padding-left:19px;
+          padding-left:22px;
+          margin-right:25px;
         }
         .share{
-          background:url("../images/dianzan.png") no-repeat center;
+          background:url("../images/share.png") no-repeat left center;
         }
-        .zan{
-          background:url("../images/dianzan.png") no-repeat center;
+        .comment{
+          background:url("../images/paikedetail/comment.png") no-repeat left center;
+
+        }
+        .zanzan{
+          background:url("../images/paikedetail/zanzan.png") no-repeat left center;
+
+        }
+        .star{
+          background:url("../images/paikedetail/star1.jpg") no-repeat left center;
+
+        }
+        .look{
+          background:url("../images/paikedetail/look.png") no-repeat left center;
+
         }
       }
       .split-line{
