@@ -1,0 +1,39 @@
+@import "common/common";
+@import "common/mixin";
+@import "valiable";
+
+@import "component/membertitle";
+@import "component/member-header";
+
+@import "component/banner_header";
+
+
+.san-nav{
+  height: 140px;
+  line-height: 140px;
+  p.tit{
+    font-size: 24px;
+    span{
+      font-size: 15px;
+      color:#999;
+      margin-left: 10px;
+    }
+  }
+  .san-nav-item{
+    text-align: right;
+    color:rgba(0,0,0,0.2);
+    span{
+      margin: 0 20px;
+    }
+    span a{
+      color:#333;
+    }
+    span.on a{
+      color:#CA2E3E;
+    }
+  }
+}
+
+.menlei-container{
+  @include clearfix;
+}
