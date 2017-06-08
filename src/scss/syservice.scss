@@ -37,3 +37,155 @@
 .menlei-container{
   @include clearfix;
 }
+
+.menlei-container{
+  margin-bottom:50px;
+  div.row{
+    .col-md-3{
+      padding:10px;
+      img{
+        width:100%;
+        height:100%;
+      }
+      .english{
+        margin-top:30px;
+        color:$red;
+      }
+      .chinease{
+        margin-top:15px;
+      }
+
+    }
+  }
+}
+
+.tizhi-container{
+  margin-bottom:50px;
+  div.row{
+    .english{
+      margin-top:10px;
+    }
+    .chinease{
+       margin-top:30px;
+    }
+  }
+}
+
+.tedian-container{
+  margin-bottom:50px;
+  div.row{
+    .col-md-3{
+      padding:10px;
+      img{
+      }
+    }
+    .detail{
+      margin-top:15px;
+      color:#999;
+      font-weight:300;
+    }
+    .title{
+      font-size:20px;
+      margin-top:30px;
+    }
+  }
+}
+
+.kecheng-container{
+  margin-bottom:50px;
+ @include clearfix;
+  .kecheng-category{
+    display:flex;
+    justify-content:center;
+    &>div{
+      border:2px solid #333;
+      width:197px;
+      height:280px;
+      margin:10px;
+      h3{
+        font-size:20px;
+        margin-top:30px;
+        margin-bottom:20px;
+      }
+      p{
+        margin-top:5px 0;
+      }
+
+    }
+    &>div.middle{
+      background:$red;
+      color:$white;
+      border:0;
+      .short-line{
+       background:#fff;
+      }
+    }
+    .short-line{
+      margin-top:80px;
+      margin-bottom:20px;
+      display:inline-block;
+      width:50px;
+      height:2px;
+      background:$red;
+    }
+    .price{
+      font-size:20px;
+    }
+  }
+}
+
+
+.newliliang-container{
+  .row{
+    .col-md-3{
+      padding:10px;
+      .chinease-name{
+        margin-top:5px;
+        font-size:18px;
+        font-weight:600;
+      }
+      .english-name{
+        margin-top:30px;
+        font-size:18px;
+        font-weight:600;
+      }
+      .short-line{
+        display:inline-block;
+        width:50px;
+        height:2px;
+        background:$red;
+        margin:15px 0;
+      }
+    }
+  }
+}
+
+.swiper-wrapper{
+  @include clearfix;
+  margin-bottom:50px;
+}
+.swiper-slide{
+  width:100%;
+}
+.swiper-pagination-bullet{
+  border-radius: inherit;
+  width: 40px;
+  height: 3px;
+  background: #aaa;
+}
+.swiper-pagination-bullet-active{
+  background: #CA2E3E;
+}
+
+@media (device-width=max-width:768px){
+  .kecheng-container{
+    margin-bottom:50px;
+    @include clearfix;
+     .kecheng-category {
+        display:block;
+       &>div{
+         display:block;
+       }
+     }
+   }
+}
