@@ -7,6 +7,9 @@
 
 @import "component/banner_header";
 
+.container{
+  max-width:1200px;
+}
 .member-header{
   @include clearfix;
   background:url("../images/members/member-theme.jpg");
